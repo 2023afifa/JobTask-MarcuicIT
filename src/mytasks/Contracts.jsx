@@ -1,6 +1,7 @@
 import React from 'react';
-import { Card, Table } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import { records as data, expandableRecords } from "../pages/tables/data";
+import Table from "../components/Table";
 
 
 const columns = [

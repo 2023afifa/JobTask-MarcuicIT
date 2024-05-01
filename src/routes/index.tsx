@@ -4,6 +4,10 @@ import { Navigate, Route, RouteProps } from "react-router-dom";
 // components
 import PrivateRoute from "./PrivateRoute";
 import Contracts from "../mytasks/Contracts";
+import Patients from "../mytasks/Patients";
+import HomeVisits from "../mytasks/HomeVisits";
+import RolesAndUsers from "../mytasks/RolesAndUsers";
+import Settings from "../mytasks/Settings";
 // import Root from "./Root";
 
 // lazy load all the views
@@ -207,6 +211,30 @@ const taskAppRoutes: RoutesProps = {
       path: "/apps/tasks/contracts",
       name: "Contracts",
       element: <Contracts></Contracts>,
+      route: PrivateRoute,
+    },
+    {
+      path: "/apps/tasks/patients",
+      name: "Patients",
+      element: <Patients></Patients>,
+      route: PrivateRoute,
+    },
+    {
+      path: "/apps/tasks/homevisits",
+      name: "Home Visits",
+      element: <HomeVisits></HomeVisits>,
+      route: PrivateRoute,
+    },
+    {
+      path: "/apps/tasks/rolesandusers",
+      name: "Roles and Users",
+      element: <RolesAndUsers></RolesAndUsers>,
+      route: PrivateRoute,
+    },
+    {
+      path: "/apps/tasks/settings",
+      name: "General Settings",
+      element: <Settings></Settings>,
       route: PrivateRoute,
     },
     {

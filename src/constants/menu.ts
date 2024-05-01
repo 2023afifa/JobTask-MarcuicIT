@@ -103,9 +103,33 @@ const MENU_ITEMS: MenuItemTypes[] = [
     icon: "clipboard",
     children: [
       {
-        key: "task-contracts",
-        label: "Contracts",
+        key: "task-contacts",
+        label: "Contacts",
         url: "/apps/tasks/contracts",
+        parentKey: "apps-tasks",
+      },
+      {
+        key: "task-patients",
+        label: "Patients",
+        url: "/apps/tasks/patients",
+        parentKey: "apps-tasks",
+      },
+      {
+        key: "task-homevisits",
+        label: "Home Visits",
+        url: "/apps/tasks/homevisits",
+        parentKey: "apps-tasks",
+      },
+      {
+        key: "task-rolesandusers",
+        label: "Roles and Users",
+        url: "/apps/tasks/rolesandusers",
+        parentKey: "apps-tasks",
+      },
+      {
+        key: "task-settings",
+        label: "General Settings",
+        url: "/apps/tasks/settings",
         parentKey: "apps-tasks",
       },
       {

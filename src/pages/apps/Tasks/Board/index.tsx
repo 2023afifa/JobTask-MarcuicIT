@@ -202,11 +202,6 @@ const Kanban = () => {
     <React.Fragment>
       <PageTitle
         breadCrumbItems={[
-          { label: "Contacts", path: "apps/tasks/contracts" },
-          { label: "Patients", path: "apps/tasks/patients" },
-          { label: "Home Visits", path: "apps/tasks/homevisits" },
-          { label: "Roles and Users", path: "apps/tasks/rolesandusers" },
-          { label: "General Settings", path: "apps/tasks/settings" },
           { label: "Tasks", path: "apps/tasks/kanban" },
           { label: "Kanban Board", path: "apps/tasks/kanban", active: true },
         ]}

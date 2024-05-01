@@ -33,6 +33,36 @@ const MENU_ITEMS: MenuItemTypes[] = [
         url: "/dashboard/analytics",
         parentKey: "dashboards",
       },
+      {
+        key: "ds-contacts",
+        label: "Contacts",
+        url: "/dashboard/contracts",
+        parentKey: "dashboards",
+      },
+      {
+        key: "ds-patients",
+        label: "Patients",
+        url: "/dashboard/patients",
+        parentKey: "dashboards",
+      },
+      {
+        key: "ds-homevisits",
+        label: "Home Visits",
+        url: "/dashboard/homevisits",
+        parentKey: "dashboards",
+      },
+      {
+        key: "ds-rolesandusers",
+        label: "Roles and Users",
+        url: "/dashboard/rolesandusers",
+        parentKey: "dashboards",
+      },
+      {
+        key: "ds-settings",
+        label: "General Settings",
+        url: "/dashboard/settings",
+        parentKey: "dashboards",
+      },
     ],
   },
   { key: "apps", label: "Apps", isTitle: true },
@@ -102,36 +132,6 @@ const MENU_ITEMS: MenuItemTypes[] = [
     isTitle: false,
     icon: "clipboard",
     children: [
-      {
-        key: "task-contacts",
-        label: "Contacts",
-        url: "/apps/tasks/contracts",
-        parentKey: "apps-tasks",
-      },
-      {
-        key: "task-patients",
-        label: "Patients",
-        url: "/apps/tasks/patients",
-        parentKey: "apps-tasks",
-      },
-      {
-        key: "task-homevisits",
-        label: "Home Visits",
-        url: "/apps/tasks/homevisits",
-        parentKey: "apps-tasks",
-      },
-      {
-        key: "task-rolesandusers",
-        label: "Roles and Users",
-        url: "/apps/tasks/rolesandusers",
-        parentKey: "apps-tasks",
-      },
-      {
-        key: "task-settings",
-        label: "General Settings",
-        url: "/apps/tasks/settings",
-        parentKey: "apps-tasks",
-      },
       {
         key: "task-list",
         label: "List",

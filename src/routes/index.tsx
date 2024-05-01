@@ -127,6 +127,36 @@ const dashboardRoutes: RoutesProps = {
       element: <AnalyticsDashboard />,
       route: PrivateRoute,
     },
+    {
+      path: "/dashboard/contracts",
+      name: "Contracts",
+      element: <Contracts></Contracts>,
+      route: PrivateRoute,
+    },
+    {
+      path: "/dashboard/patients",
+      name: "Patients",
+      element: <Patients></Patients>,
+      route: PrivateRoute,
+    },
+    {
+      path: "/dashboard/homevisits",
+      name: "Home Visits",
+      element: <HomeVisits></HomeVisits>,
+      route: PrivateRoute,
+    },
+    {
+      path: "/dashboard/rolesandusers",
+      name: "Roles and Users",
+      element: <RolesAndUsers></RolesAndUsers>,
+      route: PrivateRoute,
+    },
+    {
+      path: "/dashboard/settings",
+      name: "General Settings",
+      element: <Settings></Settings>,
+      route: PrivateRoute,
+    },
   ],
 };
 
@@ -207,36 +237,6 @@ const taskAppRoutes: RoutesProps = {
   roles: ["Admin"],
   icon: "clipboard",
   children: [
-    {
-      path: "/apps/tasks/contracts",
-      name: "Contracts",
-      element: <Contracts></Contracts>,
-      route: PrivateRoute,
-    },
-    {
-      path: "/apps/tasks/patients",
-      name: "Patients",
-      element: <Patients></Patients>,
-      route: PrivateRoute,
-    },
-    {
-      path: "/apps/tasks/homevisits",
-      name: "Home Visits",
-      element: <HomeVisits></HomeVisits>,
-      route: PrivateRoute,
-    },
-    {
-      path: "/apps/tasks/rolesandusers",
-      name: "Roles and Users",
-      element: <RolesAndUsers></RolesAndUsers>,
-      route: PrivateRoute,
-    },
-    {
-      path: "/apps/tasks/settings",
-      name: "General Settings",
-      element: <Settings></Settings>,
-      route: PrivateRoute,
-    },
     {
       path: "/apps/tasks/list",
       name: "Task List",

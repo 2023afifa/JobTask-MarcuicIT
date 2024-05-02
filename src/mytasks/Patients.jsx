@@ -2,7 +2,8 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import { records as data } from "./Patientsdata";
 import Table from "./Table";
-import { FaEdit, FaFileContract, FaTrash } from "react-icons/fa";
+import { FaEdit, FaTrash } from "react-icons/fa";
+import { MdSick } from "react-icons/md";
 
 
 const columns = [
@@ -37,6 +38,7 @@ const columns = [
     {
         Header: "Due",
         accessor: "due",
+        Cell: ({ value }) => <span style={{ color: 'red', fontWeight: "bold" }}>{value}</span>,
     },
     {
         Header: "Action",
@@ -78,7 +80,7 @@ const Patients = () => {
     return (
         <div>
             <h3 className='d-flex align-items-center mt-3'>
-                <FaFileContract />Patients
+                <MdSick className='me-1' />Patients
             </h3>
             <Card style={{ borderRadius: '15px', borderTopWidth: "8px", borderTopColor: "#007bff" }}>
                 <Card.Body>

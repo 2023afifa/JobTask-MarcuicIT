@@ -1,8 +1,9 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
-import { records as data } from "../pages/tables/data";
+import { records as data } from "./HomeVisitsdata";
 import Table from "./Table";
 import { FaFileContract } from "react-icons/fa";
+import { TiTick } from "react-icons/ti";
 
 
 const columns = [
@@ -29,6 +30,11 @@ const columns = [
     {
         Header: "Viewed",
         accessor: "viewed",
+        Cell: ({ row }) => (
+            <div className='d-flex justify-content-center'>
+                <TiTick style={{ color: "#0BDA51", cursor: "pointer", fontSize: "1.4rem", marginRight: "10px" }} />
+            </div>
+        ),
     },
     {
         Header: "Status",

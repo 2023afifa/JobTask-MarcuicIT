@@ -19,7 +19,7 @@ const columns = [
         accessor: "name",
     },
     {
-        Header: "Phone",
+        Header: "Phone Number",
         accessor: "phone",
     },
     {

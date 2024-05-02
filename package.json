@@ -39,6 +39,7 @@
     "react-dropzone": "^11.4.2",
     "react-hook-form": "^7.16.1",
     "react-i18next": "^11.12.0",
+    "react-icons": "^5.2.0",
     "react-redux": "^7.2.5",
     "react-router-dom": "^6.8.2",
     "react-scripts": "5.0.1",
@@ -79,8 +80,6 @@
     ]
   },
   "devDependencies": {
-    "@types/sortablejs": "^1.10.7",
-    "prettier": "^2.3.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -101,6 +100,8 @@
     "@types/react-select": "^4.0.17",
     "@types/react-table": "^7.7.2",
     "@types/react-text-mask": "^5.4.9",
-    "@types/redux-saga": "^0.10.5"
+    "@types/redux-saga": "^0.10.5",
+    "@types/sortablejs": "^1.10.7",
+    "prettier": "^2.3.2"
   }
 }

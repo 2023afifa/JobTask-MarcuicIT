@@ -35,7 +35,7 @@ const MENU_ITEMS: MenuItemTypes[] = [
       },
       {
         key: "ds-contacts",
-        label: "Contacts",
+        label: "Contracts",
         url: "/dashboard/contracts",
         parentKey: "dashboards",
       },

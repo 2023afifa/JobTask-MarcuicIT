@@ -175,7 +175,7 @@ const Table = (props) => {
                 <table
                     {...dataTable.getTableProps()}
                     className={classNames(
-                        "table table-centered react-table",
+                        "table table-centered react-table table-bordered table-striped table-hover",
                         props["tableClass"]
                     )}
                 >
@@ -192,6 +192,7 @@ const Table = (props) => {
                                             sorting_asc: column.isSortedDesc === false,
                                             sortable: column.sort === true,
                                         })}
+                                        style={{ backgroundColor: '#007bff', color: '#f0f0f0', fontWeight: 'bold' }}
                                     >
                                         {column.render("Header")}
                                     </th>

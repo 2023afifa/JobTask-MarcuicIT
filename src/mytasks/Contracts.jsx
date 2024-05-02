@@ -1,7 +1,8 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
-import { records as data, expandableRecords } from "../pages/tables/data";
-import Table from "../components/Table";
+import { records as data } from "../pages/tables/data";
+import Table from "./Table";
+import { FaFileContract } from "react-icons/fa";
 
 
 const columns = [
@@ -57,11 +58,12 @@ const sizePerPageList = [
 const Contracts = () => {
     return (
         <div>
-            <Card>
+            <h3 className='d-flex align-items-center mt-3'>
+                <FaFileContract />Contracts
+            </h3>
+            <Card style={{ borderRadius: '15px', borderTopWidth: "8px", borderTopColor: "#007bff" }}>
                 <Card.Body>
-                    <h4 className="header-title">Search</h4>
-                    <p className="text-muted fs-14 mb-4">A Table allowing search</p>
-
+                    <h4>Contracts Table</h4>
                     <Table
                         columns={columns}
                         data={data}

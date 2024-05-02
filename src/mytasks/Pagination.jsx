@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import classNames from "classnames";
+import "./Style.css"
 
 const Pagination = ({ tableProps, sizePerPageList }) => {
     const [pageCount, setPageCount] = useState(tableProps.pageCount);
@@ -100,7 +101,7 @@ const Pagination = ({ tableProps, sizePerPageList }) => {
                     />
                 </span>
 
-                <ul className="pagination pagination-rounded d-inline-flex ms-auto">
+                <ul className="pagination d-inline-flex ms-auto custom-pagination">
                     <li
                         key="prevpage"
                         className={classNames("page-item", "paginate_button", "previous", {
@@ -112,7 +113,7 @@ const Pagination = ({ tableProps, sizePerPageList }) => {
                         }}
                     >
                         <Link to="#" className="page-link">
-                            <i className="uil uil-angle-left"></i>
+                            <a>Previous</a>
                         </Link>
                     </li>
                     {(visiblePages || []).map((page, index, array) => {
@@ -169,7 +170,7 @@ const Pagination = ({ tableProps, sizePerPageList }) => {
                         }}
                     >
                         <Link to="#" className="page-link">
-                            <i className="uil uil-angle-right"></i>
+                            <a>Next</a>
                         </Link>
                     </li>
                 </ul>

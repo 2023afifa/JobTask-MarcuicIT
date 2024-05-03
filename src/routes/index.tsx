@@ -8,6 +8,8 @@ import Patients from "../mytasks/Patients";
 import HomeVisits from "../mytasks/HomeVisits";
 import RolesAndUsers from "../mytasks/RolesAndUsers";
 import Settings from "../mytasks/Settings";
+import Roles from "../mytasks/Roles";
+import Users from "../mytasks/Users";
 // import Root from "./Root";
 
 // lazy load all the views
@@ -150,6 +152,20 @@ const dashboardRoutes: RoutesProps = {
       name: "Roles and Users",
       element: <RolesAndUsers></RolesAndUsers>,
       route: PrivateRoute,
+      children: [
+        {
+          path: "/dashboard/rolesandusers/roles",
+          name: "Roles",
+          element: <Roles></Roles>,
+          route: PrivateRoute,
+        },
+        {
+          path: "/dashboard/rolesandusers/users",
+          name: "Users",
+          element: <Users></Users>,
+          route: PrivateRoute,
+        },
+      ],
     },
     {
       path: "/dashboard/settings",

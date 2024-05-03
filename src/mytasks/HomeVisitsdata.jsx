@@ -5,6 +5,7 @@ const records = [
         phone: "123-456-7890",
         address: "123 Main St, City, USA",
         date: "2024-01-01",
+        status: true,
     },
     {
         id: 2,
@@ -12,6 +13,7 @@ const records = [
         phone: "234-567-8901",
         address: "456 Elm St, City, Canada",
         date: "2024-01-02",
+        status: true,
     },
     {
         id: 3,
@@ -19,6 +21,7 @@ const records = [
         phone: "345-678-9012",
         address: "789 Oak St, City, UK",
         date: "2024-01-03",
+        status: true,
     },
     {
         id: 4,
@@ -26,6 +29,7 @@ const records = [
         phone: "456-789-0123",
         address: "101 Pine St, City, Australia",
         date: "2024-01-04",
+        status: true,
     },
     {
         id: 5,
@@ -33,6 +37,7 @@ const records = [
         phone: "567-890-1234",
         address: "202 Maple St, City, Germany",
         date: "2024-01-05",
+        status: true,
     },
     {
         id: 6,
@@ -40,6 +45,7 @@ const records = [
         phone: "678-901-2345",
         address: "303 Cedar St, City, France",
         date: "2024-01-06",
+        status: true,
     },
     {
         id: 7,
@@ -47,6 +53,7 @@ const records = [
         phone: "789-012-3456",
         address: "404 Birch St, City, Italy",
         date: "2024-01-07",
+        status: true,
     },
     {
         id: 8,
@@ -54,6 +61,7 @@ const records = [
         phone: "890-123-4567",
         address: "505 Walnut St, City, Japan",
         date: "2024-01-08",
+        status: true,
     },
     {
         id: 9,
@@ -61,6 +69,7 @@ const records = [
         phone: "901-234-5678",
         address: "606 Pine St, City, Spain",
         date: "2024-01-09",
+        status: true,
     },
     {
         id: 10,
@@ -68,6 +77,7 @@ const records = [
         phone: "012-345-6789",
         address: "707 Elm St, City, Brazil",
         date: "2024-01-10",
+        status: true,
     },
     {
         id: 11,
@@ -75,6 +85,7 @@ const records = [
         phone: "123-456-7890",
         address: "808 Oak St, City, China",
         date: "2024-01-11",
+        status: true,
     },
     {
         id: 12,
@@ -82,6 +93,7 @@ const records = [
         phone: "234-567-8901",
         address: "909 Cedar St, City, India",
         date: "2024-01-12",
+        status: true,
     },
     {
         id: 13,
@@ -89,6 +101,7 @@ const records = [
         phone: "345-678-9012",
         address: "1010 Pine St, City, Russia",
         date: "2024-01-13",
+        status: true,
     },
     {
         id: 14,
@@ -96,6 +109,7 @@ const records = [
         phone: "456-789-0123",
         address: "111 Maple St, City, South Africa",
         date: "2024-01-14",
+        status: true,
     },
     {
         id: 15,
@@ -103,6 +117,7 @@ const records = [
         phone: "567-890-1234",
         address: "121 Elm St, City, Mexico",
         date: "2024-01-15",
+        status: true,
     },
     {
         id: 16,
@@ -110,6 +125,7 @@ const records = [
         phone: "678-901-2345",
         address: "131 Cedar St, City, Argentina",
         date: "2024-01-16",
+        status: true,
     },
     {
         id: 17,
@@ -117,6 +133,7 @@ const records = [
         phone: "789-012-3456",
         address: "141 Birch St, City, South Korea",
         date: "2024-01-17",
+        status: true,
     },
     {
         id: 18,
@@ -124,6 +141,7 @@ const records = [
         phone: "890-123-4567",
         address: "151 Walnut St, City, Turkey",
         date: "2024-01-18",
+        status: true,
     },
     {
         id: 19,
@@ -131,6 +149,7 @@ const records = [
         phone: "901-234-5678",
         address: "161 Pine St, City, Sweden",
         date: "2024-01-19",
+        status: true,
     },
     {
         id: 20,
@@ -138,6 +157,7 @@ const records = [
         phone: "012-345-6789",
         address: "171 Elm St, City, Netherlands",
         date: "2024-01-20",
+        status: true,
     },
     {
         id: 21,
@@ -145,6 +165,7 @@ const records = [
         phone: "123-456-7890",
         address: "181 Oak St, City, Norway",
         date: "2024-01-21",
+        status: true,
     },
     {
         id: 22,
@@ -152,6 +173,7 @@ const records = [
         phone: "234-567-8901",
         address: "191 Cedar St, City, Saudi Arabia",
         date: "2024-01-22",
+        status: true,
     },
     {
         id: 23,
@@ -159,6 +181,7 @@ const records = [
         phone: "345-678-9012",
         address: "202 Pine St, City, Poland",
         date: "2024-01-23",
+        status: true,
     },
     {
         id: 24,
@@ -166,6 +189,7 @@ const records = [
         phone: "456-789-0123",
         address: "212 Maple St, City, Malaysia",
         date: "2024-01-24",
+        status: true,
     },
     {
         id: 25,
@@ -173,6 +197,7 @@ const records = [
         phone: "567-890-1234",
         address: "222 Elm St, City, Indonesia",
         date: "2024-01-25",
+        status: true,
     },
     {
         id: 26,
@@ -180,6 +205,7 @@ const records = [
         phone: "678-901-2345",
         address: "232 Cedar St, City, Philippines",
         date: "2024-01-26",
+        status: true,
     },
     {
         id: 27,
@@ -187,6 +213,7 @@ const records = [
         phone: "789-012-3456",
         address: "242 Birch St, City, Thailand",
         date: "2024-01-27",
+        status: true,
     },
     {
         id: 28,
@@ -194,6 +221,7 @@ const records = [
         phone: "890-123-4567",
         address: "252 Walnut St, City, Egypt",
         date: "2024-01-28",
+        status: true,
     },
     {
         id: 29,
@@ -201,6 +229,7 @@ const records = [
         phone: "901-234-5678",
         address: "262 Pine St, City, Vietnam",
         date: "2024-01-29",
+        status: true,
     },
     {
         id: 30,
@@ -208,6 +237,7 @@ const records = [
         phone: "012-345-6789",
         address: "272 Elm St, City, Greece",
         date: "2024-01-30",
+        status: true,
     },
 ];
 

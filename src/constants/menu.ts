@@ -54,8 +54,21 @@ const MENU_ITEMS: MenuItemTypes[] = [
       {
         key: "ds-rolesandusers",
         label: "Roles and Users",
-        url: "/dashboard/rolesandusers",
         parentKey: "dashboards",
+        children: [
+          {
+            key: "roles",
+            label: "Roles",
+            url: "/dashboard/rolesandusers/roles",
+            parentKey: "rolesandusers",
+          },
+          {
+            key: "users",
+            label: "Users",
+            url: "/dashboard/rolesandusers/users",
+            parentKey: "rolesandusers",
+          },
+        ],
       },
       {
         key: "ds-settings",

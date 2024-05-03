@@ -1,20 +1,24 @@
 import React, { useState } from 'react';
-import { Button, Card, ToggleButton } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import { records as data } from "./HomeVisitsdata";
 import Table from "./Table";
 import { FaHome } from "react-icons/fa";
 import { TiTick } from "react-icons/ti";
+import { IoSettingsSharp } from "react-icons/io5";
 import Switch from 'react-switch';
 
 
 const HomeVisits = () => {
 
-    const [isToggled, setIsToggled] = useState(false);
-    const [toggleText, setToggleText] = useState("Pending");
+    const [info, setInfo] = useState(data);
 
-    const handleToggle = (checked) => {
-        setIsToggled(checked);
-        setToggleText(checked ? "Completed" : "Pending");
+    const handleToggle = (id) => {
+        setInfo(info.map(row => {
+            if (row.id === id) {
+                return { ...row, status: !row.status };
+            }
+            return row;
+        }));
     };
 
     const columns = [
@@ -53,8 +57,8 @@ const HomeVisits = () => {
             Cell: ({ row }) => (
                 <div>
                     <Switch
-                        checked={isToggled}
-                        onChange={handleToggle}
+                        checked={row.status}
+                        onChange={() => handleToggle(row.id)}
                         offColor="#888"
                         onColor="#0BDA51"
                         offHandleColor="#fff"
@@ -71,6 +75,19 @@ const HomeVisits = () => {
         {
             Header: "Action",
             accessor: "action",
+            Cell: ({ row }) => (
+                <div class="dropdown">
+                    <button class="btn rounded-pill dropdown-toggle d-flex align-items-center justify-content-evenly" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style={{ backgroundColor: "#007bff" }}>
+                        <IoSettingsSharp className='me-1' /> Action
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Show</a></li>
+                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                        <li><a class="dropdown-item" href="#">Create</a></li>
+                        <li><a class="dropdown-item" href="#">Delete Group</a></li>
+                    </ul>
+                </div>
+            ),
         },
     ];
 

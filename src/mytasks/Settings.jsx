@@ -38,11 +38,14 @@ const Settings = () => {
                     <div className="card">
                         <div className="btn-group" role="group" aria-label="Basic example">
                             <button type="button" className={`btn ${activeButton === 1 ? 'active' : ''}`}
-                                onClick={() => handleButtonClick(1)} style={{ backgroundColor: "#007bff" }}>General</button>
+                                onClick={() => handleButtonClick(1)}
+                                style={{ backgroundColor: activeButton === 1 ? 'white' : '#007bff', color: activeButton === 1 ? '#007bff' : 'white' }}>General</button>
                             <button type="button" className={`btn ${activeButton === 2 ? 'active' : ''}`}
-                                onClick={() => handleButtonClick(2)} style={{ backgroundColor: "#007bff" }}>Social</button>
+                                onClick={() => handleButtonClick(2)} style={{ backgroundColor: activeButton === 2 ? 'white' : '#007bff', 
+                                color: activeButton === 2 ? '#007bff' : 'white'  }}>Social</button>
                             <button type="button" className={`btn ${activeButton === 3 ? 'active' : ''}`}
-                                onClick={() => handleButtonClick(3)} style={{ backgroundColor: "#007bff" }}>Logos</button>
+                                onClick={() => handleButtonClick(3)} style={{ backgroundColor: activeButton === 3 ? 'white' : '#007bff', 
+                                color: activeButton === 3 ? '#007bff' : 'white'  }}>Logos</button>
                         </div>
                         <div class="card-body">
 
@@ -129,6 +132,24 @@ const Settings = () => {
                                                     </div>
                                                 </Col>
 
+                                            </Row>
+                                        </Form>
+                                    </div>
+                                )}
+
+                            {
+                                activeButton === 3 && (
+                                    <div>
+                                        <Form className="form-horizontal">
+                                            <Row>
+                                                <div class="input-group mb-3">
+                                                    <input type="file-input" class="form-control" placeholder="Choose report logo [100 X 100]" aria-label="Recipient's username" aria-describedby="button-addon2" />
+                                                    <button class="btn btn-secondary" type="button" id="button-addon2">Browse</button>
+                                                </div>
+                                                <div class="input-group mb-3">
+                                                    <input type="file-input" class="form-control" placeholder="Choose logo [100 X 100]" aria-label="Recipient's username" aria-describedby="button-addon2" />
+                                                    <button class="btn btn-secondary" type="button" id="button-addon2">Browse</button>
+                                                </div>
                                             </Row>
                                         </Form>
                                     </div>

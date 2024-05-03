@@ -46,86 +46,93 @@ const Settings = () => {
                         </div>
                         <div class="card-body">
 
-                            <div className={`section ${activeButton === 1 ? 'active-section' : ''}`}>
-                                <Form className="form-horizontal">
-                                    <Row>
-                                        <Col md={6}>
-                                            <div class="input-group flex-nowrap mb-3">
-                                                <span class="input-group-text" id="addon-wrapping"><MdEditDocument style={{ fontSize: "1.4rem" }} /></span>
-                                                <input type="text" class="form-control" placeholder="Extreme Lab" aria-label="Username" aria-describedby="addon-wrapping" />
-                                            </div>
+                            {
+                                activeButton === 1 && (
+                                    <div>
+                                        <Form className="form-horizontal">
+                                            <Row>
+                                                <Col md={6}>
+                                                    <div class="input-group flex-nowrap mb-3">
+                                                        <span class="input-group-text" id="addon-wrapping"><MdEditDocument style={{ fontSize: "1.4rem" }} /></span>
+                                                        <input type="text" class="form-control" placeholder="Extreme Lab" aria-label="Username" aria-describedby="addon-wrapping" />
+                                                    </div>
 
-                                            <div class="input-group flex-nowrap mb-3">
-                                                <span class="input-group-text" id="addon-wrapping"><FaMagnifyingGlass style={{ fontSize: "1.4rem" }} /></span>
-                                                <input type="text" class="form-control" placeholder="Egypt" aria-label="Username" aria-describedby="addon-wrapping" />
-                                            </div>
+                                                    <div class="input-group flex-nowrap mb-3">
+                                                        <span class="input-group-text" id="addon-wrapping"><FaMagnifyingGlass style={{ fontSize: "1.4rem" }} /></span>
+                                                        <input type="text" class="form-control" placeholder="Egypt" aria-label="Username" aria-describedby="addon-wrapping" />
+                                                    </div>
 
-                                            <div class="input-group flex-nowrap mb-3">
-                                                <span class="input-group-text" id="addon-wrapping"><IoMdMail style={{ fontSize: "1.4rem" }} /></span>
-                                                <input type="text" class="form-control" placeholder="support@extremelab.tech" aria-label="Username" aria-describedby="addon-wrapping" />
-                                            </div>
-                                        </Col>
+                                                    <div class="input-group flex-nowrap mb-3">
+                                                        <span class="input-group-text" id="addon-wrapping"><IoMdMail style={{ fontSize: "1.4rem" }} /></span>
+                                                        <input type="text" class="form-control" placeholder="support@extremelab.tech" aria-label="Username" aria-describedby="addon-wrapping" />
+                                                    </div>
+                                                </Col>
 
-                                        <Col md={6}>
-                                            <div class="input-group flex-nowrap mb-3">
-                                                <span class="input-group-text" id="addon-wrapping"><FaPoundSign style={{ fontSize: "1.4rem" }} /></span>
-                                                <Form.Select>
-                                                    <option>United Status Dollar</option>
-                                                    <option>Euro</option>
-                                                    <option>Bahraini Dinar</option>
-                                                    <option>Belorussian Ruble</option>
-                                                    <option>Angolan Kwanza</option>
-                                                </Form.Select>
-                                            </div>
+                                                <Col md={6}>
+                                                    <div class="input-group flex-nowrap mb-3">
+                                                        <span class="input-group-text" id="addon-wrapping"><FaPoundSign style={{ fontSize: "1.4rem" }} /></span>
+                                                        <Form.Select>
+                                                            <option>United Status Dollar</option>
+                                                            <option>Euro</option>
+                                                            <option>Bahraini Dinar</option>
+                                                            <option>Belorussian Ruble</option>
+                                                            <option>Angolan Kwanza</option>
+                                                        </Form.Select>
+                                                    </div>
 
-                                            <div class="input-group flex-nowrap mb-3">
-                                                <span class="input-group-text" id="addon-wrapping"><FaSquarePhone style={{ fontSize: "1.4rem" }} /></span>
-                                                <input type="text" class="form-control" placeholder="00201063955280" aria-label="Username" aria-describedby="addon-wrapping" />
-                                            </div>
+                                                    <div class="input-group flex-nowrap mb-3">
+                                                        <span class="input-group-text" id="addon-wrapping"><FaSquarePhone style={{ fontSize: "1.4rem" }} /></span>
+                                                        <input type="text" class="form-control" placeholder="00201063955280" aria-label="Username" aria-describedby="addon-wrapping" />
+                                                    </div>
 
-                                            <div class="input-group flex-nowrap mb-3">
-                                                <span class="input-group-text" id="addon-wrapping"><TfiWorld style={{ fontSize: "1.4rem" }} /></span>
-                                                <input type="text" class="form-control" placeholder="https://www.extremelab.tech" aria-label="Username" aria-describedby="addon-wrapping" />
-                                            </div>
-                                        </Col>
+                                                    <div class="input-group flex-nowrap mb-3">
+                                                        <span class="input-group-text" id="addon-wrapping"><TfiWorld style={{ fontSize: "1.4rem" }} /></span>
+                                                        <input type="text" class="form-control" placeholder="https://www.extremelab.tech" aria-label="Username" aria-describedby="addon-wrapping" />
+                                                    </div>
+                                                </Col>
 
-                                        <div class="input-group flex-nowrap mb-3">
-                                            <span class="input-group-text" id="addon-wrapping"><FaCopyright style={{ fontSize: "1.4rem" }} /></span>
-                                            <input type="text" class="form-control" placeholder="All rights are reserved ExtremeLabCompany@2021" aria-label="Username" aria-describedby="addon-wrapping" />
-                                        </div>
+                                                <div class="input-group flex-nowrap mb-3">
+                                                    <span class="input-group-text" id="addon-wrapping"><FaCopyright style={{ fontSize: "1.4rem" }} /></span>
+                                                    <input type="text" class="form-control" placeholder="All rights are reserved ExtremeLabCompany@2021" aria-label="Username" aria-describedby="addon-wrapping" />
+                                                </div>
 
-                                    </Row>
-                                </Form>
-                            </div>
+                                            </Row>
+                                        </Form>
+                                    </div>
+                                )}
 
-                            <div className={`section ${activeButton === 2 ? 'active-section' : ''}`}>
-                                <Form className="form-horizontal">
-                                    <Row>
-                                        <Col md={6}>
-                                            <div class="input-group flex-nowrap mb-3">
-                                                <span class="input-group-text" id="addon-wrapping"><FaFacebook style={{ fontSize: "1.4rem" }} /></span>
-                                                <input type="text" class="form-control" placeholder="https://facebook.com" aria-label="Username" aria-describedby="addon-wrapping" />
-                                            </div>
-                                            <div class="input-group flex-nowrap mb-3">
-                                                <span class="input-group-text" id="addon-wrapping"><FaInstagram style={{ fontSize: "1.4rem" }} /></span>
-                                                <input type="text" class="form-control" placeholder="https://instagram.com" aria-label="Username" aria-describedby="addon-wrapping" />
-                                            </div>
-                                        </Col>
 
-                                        <Col md={6}>
-                                            <div class="input-group flex-nowrap mb-3">
-                                                <span class="input-group-text" id="addon-wrapping"><FaTwitter style={{ fontSize: "1.4rem" }} /></span>
-                                                <input type="text" class="form-control" placeholder="https://twitter.com" aria-label="Username" aria-describedby="addon-wrapping" />
-                                            </div>
-                                            <div class="input-group flex-nowrap mb-3">
-                                                <span class="input-group-text" id="addon-wrapping"><FaYoutube style={{ fontSize: "1.4rem" }} /></span>
-                                                <input type="text" class="form-control" placeholder="https://youtube.com" aria-label="Username" aria-describedby="addon-wrapping" />
-                                            </div>
-                                        </Col>
+                            {
+                                activeButton === 2 && (
+                                    <div>
+                                        <Form className="form-horizontal">
+                                            <Row>
+                                                <Col md={6}>
+                                                    <div class="input-group flex-nowrap mb-3">
+                                                        <span class="input-group-text" id="addon-wrapping"><FaFacebook style={{ fontSize: "1.4rem" }} /></span>
+                                                        <input type="text" class="form-control" placeholder="https://facebook.com" aria-label="Username" aria-describedby="addon-wrapping" />
+                                                    </div>
+                                                    <div class="input-group flex-nowrap mb-3">
+                                                        <span class="input-group-text" id="addon-wrapping"><FaInstagram style={{ fontSize: "1.4rem" }} /></span>
+                                                        <input type="text" class="form-control" placeholder="https://instagram.com" aria-label="Username" aria-describedby="addon-wrapping" />
+                                                    </div>
+                                                </Col>
 
-                                    </Row>
-                                </Form>
-                            </div>
+                                                <Col md={6}>
+                                                    <div class="input-group flex-nowrap mb-3">
+                                                        <span class="input-group-text" id="addon-wrapping"><FaTwitter style={{ fontSize: "1.4rem" }} /></span>
+                                                        <input type="text" class="form-control" placeholder="https://twitter.com" aria-label="Username" aria-describedby="addon-wrapping" />
+                                                    </div>
+                                                    <div class="input-group flex-nowrap mb-3">
+                                                        <span class="input-group-text" id="addon-wrapping"><FaYoutube style={{ fontSize: "1.4rem" }} /></span>
+                                                        <input type="text" class="form-control" placeholder="https://youtube.com" aria-label="Username" aria-describedby="addon-wrapping" />
+                                                    </div>
+                                                </Col>
+
+                                            </Row>
+                                        </Form>
+                                    </div>
+                                )}
 
                         </div>
                     </div>

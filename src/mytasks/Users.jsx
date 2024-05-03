@@ -1,35 +1,38 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
-import { records as data } from "../pages/tables/data";
+import { records as data } from "./Usersdata";
 import Table from "./Table";
-import { FaFileContract } from "react-icons/fa";
+import { FaEdit, FaFileContract, FaTrash } from "react-icons/fa";
 
 
 const columns = [
     {
         Header: "ID",
         accessor: "id",
-        sort: true,
     },
     {
         Header: "Name",
         accessor: "name",
-        sort: true,
     },
     {
-        Header: "Phone Number",
-        accessor: "phone",
-        sort: false,
+        Header: "Email",
+        accessor: "email",
     },
     {
-        Header: "Age",
-        accessor: "age",
-        sort: true,
+        Header: "Roles",
+        accessor: "roles",
     },
     {
-        Header: "Company",
-        accessor: "company",
-        sort: false,
+        Header: "Action",
+        accessor: "action",
+        Cell: ({ row }) => (
+            <div className='d-flex justify-content-center'>
+                <FaEdit style={{ color: "#007bff", cursor: "pointer", fontSize: "1.4rem", marginRight: "10px" }} />
+                {/* <FaEdit onClick={() => handleEdit(row.original.id)} style={{ cursor: "pointer" }} /> */}
+                <FaTrash style={{ color: "#FF6865", cursor: "pointer", fontSize: "1.4rem" }} />
+                {/* <FaTrash onClick={() => handleDelete(row.original.id)} style={{ cursor: "pointer", marginLeft: "10px" }} /> */}
+            </div>
+        ),
     },
 ];
 

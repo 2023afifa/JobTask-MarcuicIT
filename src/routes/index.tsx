@@ -148,24 +148,16 @@ const dashboardRoutes: RoutesProps = {
       route: PrivateRoute,
     },
     {
-      path: "/dashboard/rolesandusers",
-      name: "Roles and Users",
-      element: <RolesAndUsers></RolesAndUsers>,
+      path: "/dashboard/roles",
+      name: "Roles",
+      element: <Roles></Roles>,
       route: PrivateRoute,
-      children: [
-        {
-          path: "/dashboard/rolesandusers/roles",
-          name: "Roles",
-          element: <Roles></Roles>,
-          route: PrivateRoute,
-        },
-        {
-          path: "/dashboard/rolesandusers/users",
-          name: "Users",
-          element: <Users></Users>,
-          route: PrivateRoute,
-        },
-      ],
+    },
+    {
+      path: "/dashboard/users",
+      name: "Users",
+      element: <Users></Users>,
+      route: PrivateRoute,
     },
     {
       path: "/dashboard/settings",

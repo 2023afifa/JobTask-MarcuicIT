@@ -30,7 +30,7 @@ const Contracts = () => {
             accessor: "action",
             Cell: ({ row }) => (
                 <div className='d-flex justify-content-center'>
-                    <Link to="/dashboard/contracts/edit">
+                    <Link to={`/dashboard/contracts/edit/${row.id}`}>
                         <FaEdit style={{ color: "#007bff", cursor: "pointer", fontSize: "1.4rem", marginRight: "10px" }} />
                     </Link>
                     <FaTrash onClick={() => handleDelete(row.original.id)} style={{ color: "#FF6865", cursor: "pointer", fontSize: "1.4rem" }} />

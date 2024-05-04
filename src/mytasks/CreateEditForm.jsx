@@ -2,7 +2,10 @@ import React from 'react';
 import { Row, Col, Form } from 'react-bootstrap';
 
 
-const CreateEditForm = ({ title }) => {
+const CreateEditForm = ({ title, data }) => {
+
+    const initialValues = data || { title: "Jr", discount: "10" };
+
     return (
         <div>
             <div class="card" style={{ borderRadius: '15px' }}>
@@ -15,14 +18,14 @@ const CreateEditForm = ({ title }) => {
                             <Col md={6}>
                                 <h5>Title</h5>
                                 <div class="input-group flex-nowrap mb-3">
-                                    <input type="text" class="form-control" placeholder="Jr" aria-label="Username" aria-describedby="addon-wrapping" />
+                                    <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="addon-wrapping" value={initialValues.title} />
                                 </div>
                             </Col>
 
                             <Col md={6}>
                                 <h5>Discount %</h5>
                                 <div class="input-group flex-nowrap mb-3">
-                                    <input type="text" class="form-control" placeholder="10" aria-label="Username" aria-describedby="addon-wrapping" />
+                                    <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="addon-wrapping" value={initialValues.discount} />
                                 </div>
                             </Col>
 

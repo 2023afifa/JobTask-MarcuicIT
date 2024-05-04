@@ -2,7 +2,9 @@ import React from 'react';
 import { FaFileContract } from 'react-icons/fa';
 import CreateEditForm from './CreateEditForm';
 
+
 const ContractCreate = () => {
+
     return (
         <div>
             <h3 className='d-flex align-items-center mt-3'>

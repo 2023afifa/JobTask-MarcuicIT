@@ -14,6 +14,8 @@ import ContractsEdit from "../mytasks/ContractsEdit";
 import ContractCreate from "../mytasks/ContractCreate";
 import PatientsEdit from "../mytasks/PatientsEdit";
 import PatientsCreate from "../mytasks/PatientsCreate";
+import UsersCreate from "../mytasks/UsersCreate";
+import UsersEdit from "../mytasks/UsersEdit";
 // import Root from "./Root";
 
 // lazy load all the views
@@ -190,6 +192,20 @@ const dashboardRoutes: RoutesProps = {
       name: "Users",
       element: <Users></Users>,
       route: PrivateRoute,
+      children: [
+        {
+          path: "/dashboard/users/edit",
+          name: "Edit",
+          element: <UsersEdit></UsersEdit>,
+          route: PrivateRoute,
+        },
+        {
+          path: "/dashboard/users/create",
+          name: "Create",
+          element: <UsersCreate></UsersCreate>,
+          route: PrivateRoute,
+        },
+      ],
     },
     {
       path: "/dashboard/settings",

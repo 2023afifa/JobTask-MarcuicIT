@@ -194,7 +194,7 @@ const dashboardRoutes: RoutesProps = {
       route: PrivateRoute,
       children: [
         {
-          path: "/dashboard/users/edit",
+          path: `/dashboard/users/edit/:id`,
           name: "Edit",
           element: <UsersEdit></UsersEdit>,
           route: PrivateRoute,

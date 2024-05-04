@@ -7,7 +7,10 @@ import { FaPoundSign, FaCopyright, FaFacebook, FaInstagram, FaTwitter, FaYoutube
 import { TfiWorld } from "react-icons/tfi";
 import { IoPerson } from 'react-icons/io5';
 
-const UsersCreateEdit = ({ title }) => {
+const UsersCreateEdit = ({ title, data }) => {
+
+    const initialValues = data || { name: "Name", email: "Email", roles: "" };
+
     return (
         <div>
             <div class="card" style={{ borderRadius: '15px' }}>
@@ -20,12 +23,12 @@ const UsersCreateEdit = ({ title }) => {
                             <Col md={4} style={{ width: "100%" }}>
                                 <div class="input-group flex-nowrap mb-3">
                                     <span class="input-group-text" id="addon-wrapping"><IoPerson style={{ fontSize: "1.4rem" }} /></span>
-                                    <input type="text" class="form-control" placeholder="Aash" aria-label="Username" aria-describedby="addon-wrapping" />
+                                    <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="addon-wrapping" value={initialValues.name} />
                                 </div>
 
                                 <div class="input-group flex-nowrap mb-3">
                                     <span class="input-group-text" id="addon-wrapping"><IoMdMail style={{ fontSize: "1.4rem" }} /></span>
-                                    <input type="text" class="form-control" placeholder="penisvagin@gmail.com" aria-label="Username" aria-describedby="addon-wrapping" />
+                                    <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="addon-wrapping" value={initialValues.email} />
                                 </div>
                                 <div class="input-group flex-nowrap mb-3">
                                     <span class="input-group-text" id="addon-wrapping"><FaKey style={{ fontSize: "1.4rem" }} /></span>

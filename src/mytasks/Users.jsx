@@ -2,7 +2,7 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import { records as data } from "./Usersdata";
 import Table from "./Table";
-import { FaEdit, FaFileContract, FaTrash } from "react-icons/fa";
+import { FaEdit, FaTrash } from "react-icons/fa";
 import Swal from 'sweetalert2';
 import { Link } from 'react-router-dom';
 import { IoPerson } from 'react-icons/io5';

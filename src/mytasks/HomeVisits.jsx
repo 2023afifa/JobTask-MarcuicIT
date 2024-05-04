@@ -2,23 +2,22 @@ import React, { useState } from 'react';
 import { Card } from 'react-bootstrap';
 import { records as data } from "./HomeVisitsdata";
 import Table from "./Table";
-import { FaHome } from "react-icons/fa";
+import { FaHome, FaTrash } from "react-icons/fa";
 import { TiTick } from "react-icons/ti";
 import { IoSettingsSharp } from "react-icons/io5";
 import Switch from 'react-switch';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import Swal from 'sweetalert2';
 
 
 const HomeVisits = () => {
 
-    const [info, setInfo] = useState(data);
+    const [statuses, setStatuses] = useState(data.map(item => item.status));
 
-    const handleToggle = (id) => {
-        setInfo(info.map(row => {
-            if (row.id === id) {
-                return { ...row, status: !row.status };
-            }
-            return row;
-        }));
+    const handleToggle = (index) => {
+        const newStatuses = [...statuses];
+        newStatuses[index] = !newStatuses[index];
+        setStatuses(newStatuses);
     };
 
     const columns = [
@@ -57,15 +56,8 @@ const HomeVisits = () => {
             Cell: ({ row }) => (
                 <div>
                     <Switch
-                        checked={row.status}
-                        onChange={() => handleToggle(row.id)}
-                        offColor="#888"
-                        onColor="#0BDA51"
-                        offHandleColor="#fff"
-                        onHandleColor="#fff"
-                        handleDiameter={24}
-                        uncheckedIcon={false}
-                        checkedIcon={false}
+                        checked={statuses[row.index]}
+                        onChange={() => handleToggle(row.index)}
                         height={24}
                         width={50}
                     />
@@ -81,10 +73,9 @@ const HomeVisits = () => {
                         <IoSettingsSharp className='me-1' /> Action
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Show</a></li>
-                        <li><a class="dropdown-item" href="#">Edit</a></li>
-                        <li><a class="dropdown-item" href="#">Create</a></li>
-                        <li><a class="dropdown-item" href="#">Delete Group</a></li>
+                        <li className='d-flex align-items-center'>
+                            <a onClick={() => handleDelete(row.id)} class="dropdown-item" href="#"><FaTrash className='me-2' />Delete</a>
+                        </li>
                     </ul>
                 </div>
             ),
@@ -110,6 +101,36 @@ const HomeVisits = () => {
             value: data.length,
         },
     ];
+
+    const handleDelete = id => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Yes, delete it!",
+            cancelButtonText: "No, cancel!",
+            reverseButtons: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: "Deleted!",
+                    text: "Your file has been deleted.",
+                    icon: "success"
+                });
+            } else if (
+                /* Read more about handling dismissals below */
+                result.dismiss === Swal.DismissReason.cancel
+            ) {
+                Swal.fire({
+                    title: "Cancelled",
+                    text: "Your imaginary file is safe :)",
+                    icon: "error"
+                });
+            }
+        });
+    }
+
 
     return (
         <div>

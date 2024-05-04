@@ -3,6 +3,8 @@ import { Card } from 'react-bootstrap';
 import { records as data } from "./Rolesdata";
 import Table from "./Table";
 import { FaEdit, FaFileContract, FaTrash } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 
 const columns = [
@@ -21,10 +23,10 @@ const columns = [
         accessor: "action",
         Cell: ({ row }) => (
             <div className='d-flex justify-content-center'>
-                <FaEdit style={{ color: "#007bff", cursor: "pointer", fontSize: "1.4rem", marginRight: "10px" }} />
-                {/* <FaEdit onClick={() => handleEdit(row.original.id)} style={{ cursor: "pointer" }} /> */}
-                <FaTrash style={{ color: "#FF6865", cursor: "pointer", fontSize: "1.4rem" }} />
-                {/* <FaTrash onClick={() => handleDelete(row.original.id)} style={{ cursor: "pointer", marginLeft: "10px" }} /> */}
+                <Link to="/dashboard/contracts/edit">
+                    <FaEdit style={{ color: "#007bff", cursor: "pointer", fontSize: "1.4rem", marginRight: "10px" }} />
+                </Link>
+                <FaTrash onClick={() => handleDelete(row.original.id)} style={{ color: "#FF6865", cursor: "pointer", fontSize: "1.4rem" }} />
             </div>
         ),
     },
@@ -49,6 +51,35 @@ const sizePerPageList = [
         value: data.length,
     },
 ];
+
+const handleDelete = id => {
+    Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Yes, delete it!",
+        cancelButtonText: "No, cancel!",
+        reverseButtons: true
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire({
+                title: "Deleted!",
+                text: "Your file has been deleted.",
+                icon: "success"
+            });
+        } else if (
+            /* Read more about handling dismissals below */
+            result.dismiss === Swal.DismissReason.cancel
+        ) {
+            Swal.fire({
+                title: "Cancelled",
+                text: "Your imaginary file is safe :)",
+                icon: "error"
+            });
+        }
+    });
+}
 
 
 const Roles = () => {

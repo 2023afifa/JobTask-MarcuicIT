@@ -8,7 +8,10 @@ import { TfiWorld } from "react-icons/tfi";
 import { IoPerson } from 'react-icons/io5';
 
 
-const PatientCreateEdit = ({ title }) => {
+const PatientCreateEdit = ({ title, data }) => {
+
+    const initialValues = data || { name: "Client Name", phone: "Phone Number", email: "Email Address" };
+
     return (
         <div>
             <div class="card" style={{ borderRadius: '15px' }}>
@@ -21,19 +24,19 @@ const PatientCreateEdit = ({ title }) => {
                             <Col md={2} style={{ width: "33%" }}>
                                 <div class="input-group flex-nowrap mb-3">
                                     <span class="input-group-text" id="addon-wrapping"><IoPerson style={{ fontSize: "1.4rem" }} /></span>
-                                    <input type="text" class="form-control" placeholder="Aash" aria-label="Username" aria-describedby="addon-wrapping" />
+                                    <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="addon-wrapping" value={initialValues.name} />
                                 </div>
 
                                 <div class="input-group flex-nowrap mb-3">
                                     <span class="input-group-text" id="addon-wrapping"><FaLocationDot style={{ fontSize: "1.4rem" }} /></span>
-                                    <input type="text" class="form-control" placeholder="pune" aria-label="Username" aria-describedby="addon-wrapping" />
+                                    <input type="text" class="form-control" placeholder="Address" aria-label="Username" aria-describedby="addon-wrapping" />
                                 </div>
                             </Col>
 
                             <Col md={2} style={{ width: "33%" }}>
                                 <div class="input-group flex-nowrap mb-3">
                                     <span class="input-group-text" id="addon-wrapping"><IoMdMail style={{ fontSize: "1.4rem" }} /></span>
-                                    <input type="text" class="form-control" placeholder="penisvagin@gmail.com" aria-label="Username" aria-describedby="addon-wrapping" />
+                                    <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="addon-wrapping" value={initialValues.email} />
                                 </div>
 
                                 <div class="input-group flex-nowrap mb-3">
@@ -48,12 +51,12 @@ const PatientCreateEdit = ({ title }) => {
                             <Col md={2} style={{ width: "33%" }}>
                                 <div class="input-group flex-nowrap mb-3">
                                     <span class="input-group-text" id="addon-wrapping"><FaSquarePhone style={{ fontSize: "1.4rem" }} /></span>
-                                    <input type="text" class="form-control" placeholder="+923160154602" aria-label="Username" aria-describedby="addon-wrapping" />
+                                    <input type="text" class="form-control" placeholder="" aria-label="Username" aria-describedby="addon-wrapping" value={initialValues.phone} />
                                 </div>
 
                                 <div class="input-group flex-nowrap mb-3">
                                     <span class="input-group-text" id="addon-wrapping"><MdDateRange style={{ fontSize: "1.4rem" }} /></span>
-                                    <input type="date" class="form-control" placeholder="01-06-2023" aria-label="Username" aria-describedby="addon-wrapping" />
+                                    <input type="date" class="form-control" placeholder="Date of Birth" aria-label="Username" aria-describedby="addon-wrapping" />
                                 </div>
                             </Col>
                         </Row>
